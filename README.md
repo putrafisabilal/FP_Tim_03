@@ -16,8 +16,7 @@ Berikut adalah gambaran singkat dari file-file yang ada di repository.
 8. **`README.md`** File dokumentasi umum yang menjelaskan tujuan proyek, cara menjalankan file, serta penjelasan ringkas tentang setiap bagian dalam repositori.
 9. **`dataset/`** Folder ini berisi dataset gambar dan anotasi yang digunakan untuk pelatihan model YOLOv8.
 10. **`runs/detect/train/`** Folder output dari proses pelatihan YOLOv8. Berisi hasil pelatihan seperti grafik loss dan metrik evaluasi (`results.png`), konfigurasi model (`opt.yaml`), dan bobot model hasil pelatihan (`weights/best.pt`, `weights/last.pt`). Folder ini dihasilkan secara otomatis oleh YOLOv8 saat training dijalankan.
-11. **`args.yaml`**
-    Konfigurasi parameter saat training seperti epoch, batch size, dan dataset path.
+11. **`args.yaml`** Konfigurasi parameter saat training seperti epoch, batch size, dan dataset path.
 12. **`best.pt`** Model hasil pelatihan terbaik.
 13. **`last.pt`** Model hasil pelatihan terakhir.
 14. **`BoxF1_curve.png`** Grafik kurva F1 Score per epoch.
@@ -42,8 +41,7 @@ Berikut adalah gambaran singkat dari file-file yang ada di repository.
 33. **`val_batch1_labels.jpg`** Gambar validasi batch kedua yang menampilkan label ground truth.
 34. **`val_batch1_pred.jpg`** Gambar validasi batch kedua yang menampilkan hasil prediksi model.
 35. **`val_batch2_labels.jpg`** Gambar validasi batch ketiga yang menampilkan label ground truth.
-36. **`val_batch2_pred.jpg`**
-    Gambar validasi batch ketiga yang menampilkan hasil prediksi model.
+36. **`val_batch2_pred.jpg`** Gambar validasi batch ketiga yang menampilkan hasil prediksi model.
 
 ## Problem Background
 
@@ -76,7 +74,7 @@ Kami menggunakan dataset yang diperoleh dari situs [Roboflow](https://universe.r
      * **No mask** : Menunjukkan karyawan tidak mengenakan masker.
      * **No apron** : Menunjukkan karyawan tidak mengenakan celemek.
 3. **File rusak dan missing annotations**: Dari dataset ini tidak ada file yang rusak dan missing annotations
-4. **Sebaran Resolusi Dataset**: Tinggi gambar bervariasi dari 480 picel hingga 899 pixel. Untuk lebar gambar berkisar antara 596 pixel hingga 1.032 pixel.
+4. **Sebaran Resolusi Dataset**: Tinggi gambar bervariasi dari 480 pixel hingga 899 pixel. Untuk lebar gambar berkisar antara 596 pixel hingga 1.032 pixel.
 
 ## Method
 
@@ -95,7 +93,7 @@ Sebelum digunakan untuk pelatihan model, data divalidasi untuk memastikan kualit
 * **Collections (Counter, defaultdict)** : Digunakan untuk operasi data terstruktur seperti penghitungan frekuensi dan penyimpanan data default.
 * **SciPy (gaussian_kde)** : Digunakan untuk analisis statistik lanjutan, termasuk estimasi kepadatan kernel.
 * **tqdm** : Digunakan untuk menampilkan progress bar selama iterasi proses panjang.
-* **Ultralytics (YOLO)** : Digunakan untuk implementasi model YOLO guna deteksi objek berbasis visi komputer.
+* **Ultralytics (YOLO)** : Digunakan untuk implementasi model YOLO guna mendeteksi objek berbasis visi komputer.
 * **IPython.display (Image, display)** : Digunakan untuk menampilkan gambar dan visualisasi langsung dalam lingkungan Jupyter atau notebook.
 
 ## Reference
