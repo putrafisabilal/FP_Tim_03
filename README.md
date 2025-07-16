@@ -4,7 +4,6 @@
 
 Berikut adalah gambaran singkat dari file-file yang ada di repository.
 
-```
 1. **`FP_03_EDA.ipynb`**  
    Notebook ini digunakan untuk melakukan *Exploratory Data Analysis (EDA)* terhadap dataset proyek. Di dalamnya dilakukan analisis awal seperti distribusi kelas, visualisasi data, serta identifikasi potensi masalah dalam data.
 
@@ -112,7 +111,6 @@ Berikut adalah gambaran singkat dari file-file yang ada di repository.
 
 36. **val_batch2_pred.jpg**  
     Gambar validasi batch ketiga yang menampilkan hasil prediksi model.
-```
 
 ## Problem Background
 
