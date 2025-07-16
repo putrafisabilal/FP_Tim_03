@@ -101,4 +101,5 @@ Sebelum digunakan untuk pelatihan model, data divalidasi untuk memastikan kualit
 ## Reference
 
 * [Deep learning as A Monitoring Measure for Good Hygiene Practices in Food Factories](https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi?o=dnclcdr&s=id=%22111NTOU0252004%22.&searchmode=basic&extralimit=asc=%22%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E6%B5%B7%E6%B4%8B%E5%A4%A7%E5%AD%B8%22&extralimitunit=%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E6%B5%B7%E6%B4%8B%E5%A4%A7%E5%AD%B8)
+* [ISO 9001 dan Good Manufacturing Practices (GMP)](https://trustmandiri.com/perbedaan-iso-9001-dan-gmp-standar-penting-dalam-industri-manufaktur/)
 * [Dataset Roboflow ](https://universe.roboflow.com/personcountingsonu/sonu_person-20may)
