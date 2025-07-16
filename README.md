@@ -1,115 +1,48 @@
 # PPEye Vision: SOP Compliance Monitor
 
+*[Access Link Here](https://papieye.streamlit.app/)*
+
 ## Repository Outline
 
 Berikut adalah gambaran singkat dari file-file yang ada di repository.
 
-1. **`FP_03_EDA.ipynb`**  
-   Notebook ini digunakan untuk melakukan *Exploratory Data Analysis (EDA)* terhadap dataset proyek. Di dalamnya dilakukan analisis awal seperti distribusi kelas, visualisasi data, serta identifikasi potensi masalah dalam data.
-
-2. **`FP_03_Inference_Camera.py`**  
-   Script Python yang digunakan untuk melakukan inferensi secara real-time menggunakan kamera. File ini memanfaatkan model YOLOv8 untuk mendeteksi penggunaan APD secara langsung dari video kamera.
-
-3. **`FP_03_Inference.ipynb`**  
-   Notebook ini menjalankan proses inferensi dari model terhadap gambar atau video. Berisi kode untuk memuat model YOLOv8 dan menjalankan prediksi terhadap data input yang tidak real-time.
-
-4. **`FP_03_Model.ipynb`**  
-   Notebook ini digunakan untuk proses pelatihan model YOLOv8. Termasuk di dalamnya adalah konfigurasi data, augmentasi, training loop, serta penyimpanan model hasil training.
-
-5. **`FP_03_Splitting_Data.ipynb`**  
-   Notebook ini bertugas untuk memisahkan data menjadi folder `train`, `valid`, dan `test`. Proses ini penting untuk persiapan pelatihan model yang membutuhkan struktur data terpisah.
-
-6. **`data.yaml`**  
-   File konfigurasi yang digunakan oleh YOLOv8 untuk mengetahui label serta jalur direktori dataset yang digunakan dalam proses pelatihan dan inferensi.
-
-7. **`yolov8n.pt`**  
-   File model terlatih (YOLOv8 Nano) yang digunakan untuk inferensi. File ini dihasilkan setelah proses training dan menjadi model utama untuk deteksi APD.
-
-8. **`README.md`**  
-   File dokumentasi umum yang menjelaskan tujuan proyek, cara menjalankan file, serta penjelasan ringkas tentang setiap bagian dalam repositori.
-
-9. **`dataset/`**  
-    Folder ini berisi dataset gambar dan anotasi yang digunakan untuk pelatihan model YOLOv8.
-
-10. **`runs/detect/train/`**  
-    Folder output dari proses pelatihan YOLOv8. Berisi hasil pelatihan seperti grafik loss dan metrik evaluasi (`results.png`), konfigurasi model (`opt.yaml`), dan bobot model hasil pelatihan (`weights/best.pt`, `weights/last.pt`). Folder ini dihasilkan secara otomatis oleh YOLOv8 saat training dijalankan.
-
+1. **`FP_03_EDA.ipynb`**Notebook ini digunakan untuk melakukan *Exploratory Data Analysis (EDA)* terhadap dataset proyek. Di dalamnya dilakukan analisis awal seperti distribusi kelas, visualisasi data, serta identifikasi potensi masalah dalam data.
+2. **`FP_03_Inference_Camera.py`**Script Python yang digunakan untuk melakukan inferensi secara real-time menggunakan kamera. File ini memanfaatkan model YOLOv8 untuk mendeteksi penggunaan APD secara langsung dari video kamera.
+3. **`FP_03_Inference.ipynb`**Notebook ini menjalankan proses inferensi dari model terhadap gambar atau video. Berisi kode untuk memuat model YOLOv8 dan menjalankan prediksi terhadap data input yang tidak real-time.
+4. **`FP_03_Model.ipynb`**Notebook ini digunakan untuk proses pelatihan model YOLOv8. Termasuk di dalamnya adalah konfigurasi data, augmentasi, training loop, serta penyimpanan model hasil training.
+5. **`FP_03_Splitting_Data.ipynb`**Notebook ini bertugas untuk memisahkan data menjadi folder `train`, `valid`, dan `test`. Proses ini penting untuk persiapan pelatihan model yang membutuhkan struktur data terpisah.
+6. **`data.yaml`**File konfigurasi yang digunakan oleh YOLOv8 untuk mengetahui label serta jalur direktori dataset yang digunakan dalam proses pelatihan dan inferensi.
+7. **`yolov8n.pt`**File model terlatih (YOLOv8 Nano) yang digunakan untuk inferensi. File ini dihasilkan setelah proses training dan menjadi model utama untuk deteksi APD.
+8. **`README.md`**File dokumentasi umum yang menjelaskan tujuan proyek, cara menjalankan file, serta penjelasan ringkas tentang setiap bagian dalam repositori.
+9. **`dataset/`**Folder ini berisi dataset gambar dan anotasi yang digunakan untuk pelatihan model YOLOv8.
+10. **`runs/detect/train/`**Folder output dari proses pelatihan YOLOv8. Berisi hasil pelatihan seperti grafik loss dan metrik evaluasi (`results.png`), konfigurasi model (`opt.yaml`), dan bobot model hasil pelatihan (`weights/best.pt`, `weights/last.pt`). Folder ini dihasilkan secara otomatis oleh YOLOv8 saat training dijalankan.
 11. **args.yaml**
     Konfigurasi parameter saat training seperti epoch, batch size, dan dataset path.
-
-12. **best.pt**  
-    Model hasil pelatihan terbaik.
-
-13. **last.pt**  
-    Model hasil pelatihan terakhir.
-
-14. **BoxF1_curve.png**  
-    Grafik kurva F1 Score per epoch.
-
-15. **BoxP_curve.png**  
-    Grafik kurva Precision per epoch.
-
-16. **BoxPR_curve.png**  
-    Grafik Precision-Recall curve.
-
-17. **BoxR_curve.png**  
-    Grafik kurva Recall per epoch.
-
-18. **confusion_matrix_normalized.png**  
-    Confusion matrix hasil validasi (dalam bentuk persentase).
-
-19. **confusion_matrix.png**  
-    Confusion matrix hasil validasi (dalam jumlah absolut).
-
-20. **labels_correlogram.jpg**  
-    Visualisasi hubungan antar label.
-
-21. **labels.jpg**  
-    Visualisasi distribusi label dalam dataset.
-
-22. **losskomponen.png**  
-    Grafik loss training (box loss, obj loss, cls loss).
-
-23. **results.csv**  
-    File CSV berisi metrik evaluasi per epoch.
-
-24. **results.png**  
-    Ringkasan grafik metrik pelatihan selama training.
-
-25. **train_batch0.jpg**  
-    Visualisasi batch pertama dari data pelatihan beserta hasil prediksi model.
-
-26. **train_batch1.jpg**  
-    Visualisasi batch kedua dari data pelatihan dan prediksi model.
-
-27. **train_batch2.jpg**  
-    Visualisasi batch ketiga dari data pelatihan dan prediksi model.
-
-28. **train_batch3320.jpg**  
-    Visualisasi batch ke-3320 dari data pelatihan untuk monitoring model.
-
-29. **train_batch3321.jpg**  
-    Visualisasi batch ke-3321 dari data pelatihan.
-
-30. **train_batch3322.jpg**  
-    Visualisasi batch ke-3322 dari data pelatihan.
-
-31. **val_batch0_labels.jpg**  
-    Gambar validasi batch pertama yang menampilkan label ground truth.
-
-32. **val_batch0_pred.jpg**  
-    Gambar validasi batch pertama yang menampilkan hasil prediksi model.
-
-33. **val_batch1_labels.jpg**  
-    Gambar validasi batch kedua yang menampilkan label ground truth.
-
-34. **val_batch1_pred.jpg**  
-    Gambar validasi batch kedua yang menampilkan hasil prediksi model.
-
-35. **val_batch2_labels.jpg**  
-    Gambar validasi batch ketiga yang menampilkan label ground truth.
-
-36. **val_batch2_pred.jpg**  
+12. **best.pt**Model hasil pelatihan terbaik.
+13. **last.pt**Model hasil pelatihan terakhir.
+14. **BoxF1_curve.png**Grafik kurva F1 Score per epoch.
+15. **BoxP_curve.png**Grafik kurva Precision per epoch.
+16. **BoxPR_curve.png**Grafik Precision-Recall curve.
+17. **BoxR_curve.png**Grafik kurva Recall per epoch.
+18. **confusion_matrix_normalized.png**Confusion matrix hasil validasi (dalam bentuk persentase).
+19. **confusion_matrix.png**Confusion matrix hasil validasi (dalam jumlah absolut).
+20. **labels_correlogram.jpg**Visualisasi hubungan antar label.
+21. **labels.jpg**Visualisasi distribusi label dalam dataset.
+22. **losskomponen.png**Grafik loss training (box loss, obj loss, cls loss).
+23. **results.csv**File CSV berisi metrik evaluasi per epoch.
+24. **results.png**Ringkasan grafik metrik pelatihan selama training.
+25. **train_batch0.jpg**Visualisasi batch pertama dari data pelatihan beserta hasil prediksi model.
+26. **train_batch1.jpg**Visualisasi batch kedua dari data pelatihan dan prediksi model.
+27. **train_batch2.jpg**Visualisasi batch ketiga dari data pelatihan dan prediksi model.
+28. **train_batch3320.jpg**Visualisasi batch ke-3320 dari data pelatihan untuk monitoring model.
+29. **train_batch3321.jpg**Visualisasi batch ke-3321 dari data pelatihan.
+30. **train_batch3322.jpg**Visualisasi batch ke-3322 dari data pelatihan.
+31. **val_batch0_labels.jpg**Gambar validasi batch pertama yang menampilkan label ground truth.
+32. **val_batch0_pred.jpg**Gambar validasi batch pertama yang menampilkan hasil prediksi model.
+33. **val_batch1_labels.jpg**Gambar validasi batch kedua yang menampilkan label ground truth.
+34. **val_batch1_pred.jpg**Gambar validasi batch kedua yang menampilkan hasil prediksi model.
+35. **val_batch2_labels.jpg**Gambar validasi batch ketiga yang menampilkan label ground truth.
+36. **val_batch2_pred.jpg**
     Gambar validasi batch ketiga yang menampilkan hasil prediksi model.
 
 ## Problem Background
@@ -147,7 +80,7 @@ Project disini menghasilkan sebuah model Object Detection untuk mengecek kestand
 
 ## Method
 
-Di proyek ini, saya mengembangkan pipeline untuk membangun model deteksi objek yang bertujuan memeriksa kepatuhan pekerja terhadap Standar Operasional Prosedur (SOP) di pabrik, khususnya pada penggunaan peralatan pelindung diri (PPE) seperti hairnet, apron, mask, dan gloves. Alat ini dirancang untuk ditempatkan di pintu masuk ruang produksi, memastikan pekerja telah mengenakan pakaian sesuai SOP sebelum memulai aktivitas. Proses dimulai dengan pengumpulan dataset yang beragam: kami memanfaatkan dataset awal dari situs web, dilengkapi dengan data tambahan dari berbagai sumber, termasuk gambar nyata serta foto asli yang kami ambil sendiri, untuk menciptakan dataset yang representatif dan relevan.
+Di proyek ini, kami mengembangkan pipeline untuk membangun model deteksi objek yang bertujuan memeriksa kepatuhan pekerja terhadap Standar Operasional Prosedur (SOP) di pabrik, khususnya pada penggunaan peralatan pelindung diri (PPE) seperti hairnet, apron, mask, dan gloves. Alat ini dirancang untuk ditempatkan di pintu masuk ruang produksi, memastikan pekerja telah mengenakan pakaian sesuai SOP sebelum memulai aktivitas. Proses dimulai dengan pengumpulan dataset yang beragam: kami memanfaatkan dataset awal dari situs web, dilengkapi dengan data tambahan dari berbagai sumber, termasuk gambar nyata serta foto asli yang kami ambil sendiri, untuk menciptakan dataset yang representatif dan relevan.
 
 Sebelum digunakan untuk pelatihan model, data divalidasi untuk memastikan kualitas, dengan fokus pada anotasi yang akurat dan konsisten. Model deteksi objek dikembangkan menggunakan pendekatan visi komputer, dengan implementasi berbasis YOLO untuk mengidentifikasi dan mengklasifikasikan penggunaan PPE secara real-time. Hasilnya, sistem ini mampu memberikan umpan balik instan mengenai kepatuhan SOP, yang dapat dimanfaatkan oleh tim manajemen pabrik untuk meningkatkan keselamatan kerja dan mematuhi regulasi industri pangan.
 
