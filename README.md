@@ -13,7 +13,7 @@ Berikut adalah gambaran singkat dari file-file yang ada di repository.
 5. **`FP_03_Splitting_Data.ipynb`** Notebook ini bertugas untuk memisahkan data menjadi folder `train`, `valid`, dan `test`. Proses ini penting untuk persiapan pelatihan model yang membutuhkan struktur data terpisah.
 6. **`data.yaml`** File konfigurasi yang digunakan oleh YOLOv8 untuk mengetahui label serta jalur direktori dataset yang digunakan dalam proses pelatihan dan inferensi.
 7. **`yolov8n.pt`** File model terlatih (YOLOv8 Nano) yang digunakan untuk inferensi. File ini dihasilkan setelah proses training dan menjadi model utama untuk deteksi APD.
-8. **`README.md`**File dokumentasi umum yang menjelaskan tujuan proyek, cara menjalankan file, serta penjelasan ringkas tentang setiap bagian dalam repositori.
+8. **`README.md`** File dokumentasi umum yang menjelaskan tujuan proyek, cara menjalankan file, serta penjelasan ringkas tentang setiap bagian dalam repositori.
 9. **`dataset/`** Folder ini berisi dataset gambar dan anotasi yang digunakan untuk pelatihan model YOLOv8.
 10. **`runs/detect/train/`** Folder output dari proses pelatihan YOLOv8. Berisi hasil pelatihan seperti grafik loss dan metrik evaluasi (`results.png`), konfigurasi model (`opt.yaml`), dan bobot model hasil pelatihan (`weights/best.pt`, `weights/last.pt`). Folder ini dihasilkan secara otomatis oleh YOLOv8 saat training dijalankan.
 11. **`args.yaml`**
