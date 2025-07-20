@@ -1,6 +1,6 @@
 # PPEye Vision: SOP Compliance Monitor
 
-*[Access Deployment Here](https://papieye.streamlit.app/)*
+*[Access Deployment Here](https://papieye.streamlit.app/) (via streamlit, disini aplikasinya melakukan render video yang diupload dengan model YOLO kami paling terbaru untuk melakukan inference pada video yang di upload )*
 
 ## Repository Outline
 
@@ -95,6 +95,14 @@ Sebelum digunakan untuk pelatihan model, data divalidasi untuk memastikan kualit
 * **tqdm** : Digunakan untuk menampilkan progress bar selama iterasi proses panjang.
 * **Ultralytics (YOLO)** : Digunakan untuk implementasi model YOLO guna mendeteksi objek berbasis visi komputer.
 * **IPython.display (Image, display)** : Digunakan untuk menampilkan gambar dan visualisasi langsung dalam lingkungan Jupyter atau notebook.
+
+## Stacks
+
+Cara menggunakan aplikasi:
+
+* Download latest project kami [disini](https://github.com/putrafisabilal/FP_Tim_03/releases).
+* Download .exe nya.
+* Lalu download best.pt yang ada di repo untuk model YOLO terbaru dari kami.
 
 ## Reference
 
