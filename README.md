@@ -1,6 +1,6 @@
 # PPEye Vision: SOP Compliance Monitor
 
-*[Access Deployment Here](https://papieye.streamlit.app/) (via streamlit, disini aplikasinya melakukan render video yang diupload dengan model YOLO kami paling terbaru untuk melakukan inference pada video yang di upload )*
+*[Acces Deployment Here](https://ppeyeee.streamlit.app/) (via streamlit, disini aplikasinya melakukan render video yang diupload dengan model YOLO kami paling terbaru untuk melakukan inference pada video yang di upload)*
 
 ## Repository Outline
 
